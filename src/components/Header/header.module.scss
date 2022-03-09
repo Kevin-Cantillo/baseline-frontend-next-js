@@ -1,0 +1,14 @@
+@import 'public/scss/_variables';
+
+.head {
+  background: linear-gradient(180deg, #076799 0%, #054566 100%);
+  min-height: 160px;
+  border-radius: 0 0 24px 24px;
+  &.contentSearch {
+    min-height: 196px;
+  }
+  .search {
+    margin: 16px auto;
+    max-width: 600px;
+  }
+}

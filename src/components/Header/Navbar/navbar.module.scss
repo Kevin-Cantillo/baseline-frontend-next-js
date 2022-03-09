@@ -1,0 +1,22 @@
+@import 'public/scss/_variables';
+
+.navbar {
+  background-color: white;
+  display: flex;
+  -webkit-align-items: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 0 0 16px 16px;
+}
+.items {
+  display: flex;
+  color: $secondary-color;
+}
+.imageLogo {
+  width: 100px;
+  height: 50px;
+}

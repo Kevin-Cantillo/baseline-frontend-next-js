@@ -1,0 +1,76 @@
+@import 'public/scss/_variables';
+
+.bgModalAlert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.small,
+.medium,
+.large {
+  width: 95%;
+  min-height: 100px;
+}
+
+.modalAlert {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  .content {
+    position: relative;
+    width: 100%;
+    align-self: center;
+    background: white;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    .contentContainer {
+      width: 100%;
+      height: 100%;
+      .iconBackgroundTop {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+      }
+      .modalHead {
+        font-weight: 500;
+        text-align: left;
+        border-bottom: 1px solid $placeholder-color;
+        padding: 16px;
+        p {
+          width: calc(100% - 44px);
+          margin: 0;
+          color: $primary-color;
+        }
+      }
+      .modalBody {
+        padding: 16px 60px 16px 16px;
+        word-break: break-word;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+        // overflow: hidden;
+      }
+      .modalFooter {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 16px 16px 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .small,
+  .medium,
+  .large {
+    width: 35%;
+    min-height: 100px;
+  }
+}

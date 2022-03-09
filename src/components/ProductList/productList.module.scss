@@ -1,0 +1,61 @@
+@import 'public/scss/_variables';
+
+.productListContainer {
+  .contentList {
+    display: grid;
+    grid-template-columns: calc(50% - 8px) calc(50% - 8px);
+    grid-auto-rows: 152px;
+    gap: 16px;
+
+    padding: 0 16px 0 16px;
+    margin: 0 0 16px 0;
+
+    .product {
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+  .filterLabel {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16px;
+    div {
+      display: flex;
+      &:last-child {
+        cursor: pointer;
+        color: $secondary-color;
+        p {
+          margin: 0;
+        }
+        .icon {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .productListContainer {
+    .contentList {
+      grid-template-columns: calc(25% - 12px) calc(25% - 12px) calc(25% - 12px) calc(25% - 12px);
+      grid-auto-rows: 210px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .productListContainer {
+    .filterLabel {
+      div {
+        visibility: hidden;
+      }
+    }
+  }
+}
